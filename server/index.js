@@ -13,7 +13,6 @@ import { fileURLToPath } from 'url';
 import multer from "multer";
 import fs from 'fs';
 import { Book } from "./model/book.js";
-import { Review } from "./model/review.js";
 
 dotenv.config();
 const app = express();
@@ -212,15 +211,17 @@ app.get("/books/:id", async (req, res) => {
     }
 })
 
-app.post("/reviews", (req, res) => {
+app.post("/:id/reviews", (req, res) => {
     try{
         const {token} = req.cookies;
         if(token){
             jwt.verify(token, process.env.SECRET_KEY, {}, async (err, userData) => {
                 if(err) throw err;
-                const {rating, newComment, id} = req.body; 
-                const reviewDoc = await Review.create({book: id, rating, comment: newComment, user : userData.id});
-                res.json(reviewDoc);
+                const {rating, comment} = req.body; 
+                const book = await Book.findById(req.params.id);
+                book.reviews.push({ user : userData.name, rating, comment });
+                await book.save();
+                res.json(book);
             })
         }
     }
@@ -229,10 +230,5 @@ app.post("/reviews", (req, res) => {
     }
 })
 
-app.get("/reviews/:id", async (req, res) => {
-    const {id} = req.params;
-    const reviewDoc = await Review.find({book : id});
-    res.json(reviewDoc);
-})
 
 app.listen(4000);
