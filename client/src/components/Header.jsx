@@ -7,7 +7,7 @@ const Header = () => {
     const {user} = useContext(UserContext);
 
   return (
-    <div className="flex items-center justify-between py-7 px-16 bg-gradient-to-r from-blue-300 to-purple-300">
+    <div className="flex items-center justify-between py-7 px-20 bg-gradient-to-r from-blue-300 to-purple-300">
 
         <Link to={"/"} className="flex place-items-end gap-1 pr-4 items-center">
             <img src="https://img.icons8.com/ios-glyphs/90/000000/book.png" alt="Book Logo" className="h-10" />
@@ -17,13 +17,7 @@ const Header = () => {
         <div className="flex items-center gap-3 border border-white rounded-full py-2 px-4 shadow-md">
           <div className="font-bold text-lg border-r pr-4 border-white ">Best sellers</div>
           <div className="font-bold text-lg border-r pr-4 border-white">Motivation</div>
-          <div className="font-bold text-lg border-r pr-4 border-white">New Release</div>
-          <button className="flex gap-1 ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-7 text-black">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-            </svg>
-            search
-          </button>
+          <div className="font-bold text-lg">New Release</div>
         </div>
 
         <div className="flex items-center border border-white rounded-full shadow-md py-2 px-4 gap-2 cursor-pointer">

@@ -31,7 +31,7 @@ const MyBooksPage = () => {
                             <img className="object-cover rounded-lg" src={"http://localhost:4000/uploads/" + book.photos[0]} alt="" />
                         </div>
                         <div className="flex flex-col truncate">
-                            <Link className="font-semibold text-xl cursor-pointer" to={"/account/places/" + book._id } >{book.title}</Link>
+                            <Link className="font-semibold text-xl cursor-pointer" to={"/account/books/" + book._id } >{book.title}</Link>
                             <h2 className="font-semibold text-md mb-3">by {book.author}</h2>
                             <h2>Genre : {book.genre}</h2>
                             <h2 className="text-sm">{book.description}</h2>

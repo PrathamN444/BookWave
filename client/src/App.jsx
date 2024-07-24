@@ -26,6 +26,7 @@ function App() {
           <Route path="/account/books" element={<MyBooksPage/>} />
           <Route path="/account/books/new" element={<BookForm/>} />
           <Route path="/books/:id" element={<SingleBookPage/>} />
+          <Route path="/account/books/:id" element={<BookForm/>} />
         </Routes>
     </UserContextProvider>
   )
