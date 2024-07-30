@@ -10,7 +10,7 @@ import BookForm from "./components/BookForm";
 import SingleBookPage from "./pages/SingleBookPage";
 
 
-axios.defaults.baseURL = "https://book-wave-backend.vercel.app";
+axios.defaults.baseURL = "https://book-wave-backend.onrender.com";
 axios.defaults.withCredentials = true; 
 
 function App() {

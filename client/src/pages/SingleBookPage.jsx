@@ -44,7 +44,7 @@ const SingleBookPage = () => {
             <div className="mx-28 mt-12 bg-blue-200 p-10 rounded-lg">
                 <div className="flex gap-7">
                     <div className="w-60 h-60 flex shrink-0">
-                        <img className="object-cover aspect-square rounded-lg" src={"https://book-wave-backend.vercel.app/uploads/" + bookInfo.photos[0]} alt="" />
+                        <img className="object-cover aspect-square rounded-lg" src={"https://book-wave-backend.onrender.com/uploads/" + bookInfo.photos[0]} alt="" />
                     </div>
                     <div>
                         <h2 className="font-semibold text-2xl">{bookInfo.title}</h2>
