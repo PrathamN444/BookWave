@@ -10,7 +10,7 @@ import BookForm from "./components/BookForm";
 import SingleBookPage from "./pages/SingleBookPage";
 
 
-axios.defaults.baseURL = "http://localhost:4000";
+axios.defaults.baseURL = "https://book-wave-backend.vercel.app";
 axios.defaults.withCredentials = true; 
 
 function App() {

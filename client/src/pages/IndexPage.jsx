@@ -50,7 +50,7 @@ const IndexPage = () => {
                     )).map(book => (
                     <Link to={"/books/"+book._id} key={book} className="flex gap-4 bg-gray-100 p-4 rounded-lg shadow-md cursor-pointer">
                         <div className="w-20 h-36 flex shrink-0">
-                            <img className="object-cover rounded-lg" src={"http://localhost:4000/uploads/" + book.photos[0]} alt="" />
+                            <img className="object-cover rounded-lg" src={"https://book-wave-backend.vercel.app/uploads/" + book.photos[0]} alt="" />
                         </div>
                         <div className="flex flex-col truncate">
                             <h2 className="font-semibold text-lg">{book.title}</h2>
