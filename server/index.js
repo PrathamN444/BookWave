@@ -35,8 +35,8 @@ app.use(cors({
 }))
 
 
-app.get("/test" , (req, res) => {
-    res.json("test ok");
+app.get("/" , (req, res) => {
+    res.json("api running");
 })
 
 app.post("/login", async (req, res) => {
@@ -231,4 +231,4 @@ app.post("/:id/reviews", (req, res) => {
 })
 
 
-app.listen(4000);
+app.listen(process.env.port);
